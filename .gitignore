@@ -64,3 +64,12 @@ test/spill2
 test/spill3
 test/sum
 test/sum-tail
+
+# Raytracing
+min-rt/*.ppm
+min-rt/*.cmp
+min-rt/*.sld_
+min-rt/*.cmx
+min-rt/min-rt*
+min-rt/ppmdiff
+min-rt/raytrace

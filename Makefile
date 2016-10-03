@@ -27,6 +27,7 @@ simm.mli simm.ml regAlloc.mli regAlloc.ml emit.mli emit.ml \
 main.mli main.ml
 
 YFLAGS = -v
+OCAMLLDFLAGS = -warn-error -31
 
 # ↓テストプログラムが増えたら、これも増やす
 TESTS = print sum-tail gcd sum fib ack even-odd \

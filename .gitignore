@@ -9,6 +9,7 @@ parser.output
 *.cmi
 *.o
 min-caml
+min-caml.top
 
 # Symlinks
 asm.ml
@@ -28,3 +29,38 @@ virtual.ml
 shootout/Makefile
 bytemark/Makefile
 min-rt/globals.s
+
+# Tests
+test/*.s
+test/*.res
+test/*.ans
+test/*.cmp
+test/ack
+test/adder
+test/cls-bug
+test/cls-bug2
+test/cls-rec
+test/cls-reg-bug
+test/even-odd
+test/fib
+test/funcomp
+test/gcd
+test/inprod
+test/inprod-loop
+test/inprod-rec
+test/join-reg
+test/join-reg2
+test/join-stack
+test/join-stack2
+test/join-stack3
+test/matmul
+test/matmul-flat
+test/non-tail-if
+test/non-tail-if2
+test/print
+test/shuffle
+test/spill
+test/spill2
+test/spill3
+test/sum
+test/sum-tail

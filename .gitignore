@@ -65,6 +65,14 @@ test/spill3
 test/sum
 test/sum-tail
 
+# Shootout
+shootout/*.s
+shootout/*.cmx
+shootout/*.out
+shootout/*.gcc*
+shootout/*.min-caml*
+shootout/*.ocamlopt*
+
 # Raytracing
 min-rt/*.ppm
 min-rt/*.cmp

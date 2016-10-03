@@ -1,0 +1,30 @@
+# yacc/lexer generated files
+lexer.ml
+parser.ml
+parser.mli
+parser.output
+
+# Compiler generated files
+*.cmo
+*.cmi
+*.o
+min-caml
+
+# Symlinks
+asm.ml
+!*/asm.ml
+asm.mli
+!*/asm.mli
+emit.ml
+!*/emit.ml
+libmincaml.S
+!*/libmincaml.S
+regAlloc.ml
+!*/regAlloc.ml
+simm.ml
+!*/simm.ml
+virtual.ml
+!*/virtual.ml
+shootout/Makefile
+bytemark/Makefile
+min-rt/globals.s

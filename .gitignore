@@ -1,4 +1,4 @@
-# yacc/lexer generated files
+# lexer/yacc generated files
 lexer.ml
 parser.ml
 parser.mli
@@ -7,77 +7,41 @@ parser.output
 # Compiler generated files
 *.cmo
 *.cmi
+*.cmx
 *.o
-min-caml
-min-caml.top
+*.out
+._bcdi
+._d
+/min-caml
+/min-caml.top
 
 # Symlinks
-asm.ml
-!*/asm.ml
-asm.mli
-!*/asm.mli
-emit.ml
-!*/emit.ml
-libmincaml.S
-!*/libmincaml.S
-regAlloc.ml
-!*/regAlloc.ml
-simm.ml
-!*/simm.ml
-virtual.ml
-!*/virtual.ml
-shootout/Makefile
-bytemark/Makefile
-min-rt/globals.s
+/asm.ml
+/asm.mli
+/emit.ml
+/libmincaml.S
+/regAlloc.ml
+/simm.ml
+/virtual.ml
+/shootout/Makefile
+/bytemark/Makefile
+/min-rt/globals.s
 
 # Tests
-test/*.s
-test/*.res
-test/*.ans
-test/*.cmp
-test/ack
-test/adder
-test/cls-bug
-test/cls-bug2
-test/cls-rec
-test/cls-reg-bug
-test/even-odd
-test/fib
-test/funcomp
-test/gcd
-test/inprod
-test/inprod-loop
-test/inprod-rec
-test/join-reg
-test/join-reg2
-test/join-stack
-test/join-stack2
-test/join-stack3
-test/matmul
-test/matmul-flat
-test/non-tail-if
-test/non-tail-if2
-test/print
-test/shuffle
-test/spill
-test/spill2
-test/spill3
-test/sum
-test/sum-tail
+/test/
+!/test/*.c
+!/test/*.ml
 
 # Shootout
-shootout/*.s
-shootout/*.cmx
-shootout/*.out
-shootout/*.gcc*
-shootout/*.min-caml*
-shootout/*.ocamlopt*
+/shootout/*.s
+/shootout/*.gcc*
+/shootout/*.min-caml*
+/shootout/*.ocamlopt*
 
 # Raytracing
-min-rt/*.ppm
-min-rt/*.cmp
-min-rt/*.sld_
-min-rt/*.cmx
-min-rt/min-rt*
-min-rt/ppmdiff
-min-rt/raytrace
+/min-rt/*.ppm
+/min-rt/*.cmp
+/min-rt/*.sld_
+/min-rt/min-rt*
+/min-rt/ppmdiff
+/min-rt/raytrace

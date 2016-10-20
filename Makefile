@@ -17,6 +17,7 @@ $(RESULT): debug-code top
 ##   .mliがコンパイルされてしまうので、両方ともdefault:の右辺に入れると
 ##   再make時に（.mliが変更されているので）.mlも再コンパイルされる
 clean:: nobackup
+	rm -rf *.cm*
 
 # ↓もし実装を改造したら、それに合わせて変える
 SOURCES = float.c type.ml id.ml m.ml s.ml \

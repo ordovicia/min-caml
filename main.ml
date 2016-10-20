@@ -1,4 +1,5 @@
 let limit = ref 1000
+let debug = ref false
 
 let rec iter n e = (* 最適化処理をくりかえす (caml2html: main_iter) *)
   Format.eprintf "iteration %d@." n;
@@ -18,13 +19,13 @@ let lexbuf outchan l = (* バッファをコンパイルしてチャンネルへ出力する (caml2htm
     (iter !limit
     (let alp =
         (Alpha.f
-        (Cse.common_elim
+        (Cse.cse
         (KNormal.f
         (let t
         = Typing.f
         (Parser.exp Lexer.token l)
-        in (Print.print_expr t; t)))))
-    in (Print.print_knormal alp; alp)))))))
+        in (if !debug then Print.print_expr t ; t)))))
+    in (if !debug then Print.print_knormal alp ; alp)))))))
 
 let string s = lexbuf stdout (Lexing.from_string s) (* 文字列をコンパイルして標準出力に表示する (caml2html: main_string) *)
 
@@ -40,8 +41,9 @@ let file f = (* ファイルをコンパイルしてファイルに出力する (caml2html: main_file
 let () = (* ここからコンパイラの実行が開始される (caml2html: main_entry) *)
   let files = ref [] in
   Arg.parse
-    [("-inline", Arg.Int(fun i -> Inline.threshold := i), "maximum size of functions inlined");
-     ("-iter", Arg.Int(fun i -> limit := i), "maximum number of optimizations iterated")]
+    [("-inline", Arg.Int(fun i -> Inline.threshold := i), "maximum size of functions inlined") ;
+     ("-iter", Arg.Int(fun i -> limit := i), "maximum number of optimizations iterated") ;
+     ("-debug", Arg.Unit(fun _ -> debug := true), "enable debug pring")]
     (fun s -> files := !files @ [s])
     ("Mitou Min-Caml Compiler (C) Eijiro Sumii\n" ^
      Printf.sprintf "usage: %s [-inline m] [-iter n] ...filenames without \".ml\"..." Sys.argv.(0));

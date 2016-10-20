@@ -1,1 +1,1 @@
-val common_elim: KNormal.t -> KNormal.t
+val cse: KNormal.t -> KNormal.t

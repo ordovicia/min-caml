@@ -1,5 +1,6 @@
 let indent_width = 4
 let indent = ref 0
+
 let rec padding = function
     | 0 -> ()
     | n when (n mod indent_width) = 0 -> print_string "|" ; padding (n - 1)

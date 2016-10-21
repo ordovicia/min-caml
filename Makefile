@@ -31,7 +31,6 @@ print.mli print.ml \
 main.mli main.ml
 
 YFLAGS = -v
-OCAMLLDFLAGS = -warn-error -31
 
 # ↓テストプログラムが増えたら、これも増やす
 TESTS = print sum-tail gcd sum fib ack even-odd \
